@@ -29,35 +29,61 @@ namespace CSC_317_Practical_Exam
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.numberboxTempValue = new System.Windows.Forms.NumericUpDown();
+            this.comboUnits = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numberboxTempValue)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // numberboxTempValue
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(321, 101);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 0;
+            this.numberboxTempValue.Location = new System.Drawing.Point(321, 101);
+            this.numberboxTempValue.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numberboxTempValue.Minimum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            -2147483648});
+            this.numberboxTempValue.Name = "numberboxTempValue";
+            this.numberboxTempValue.Size = new System.Drawing.Size(120, 26);
+            this.numberboxTempValue.TabIndex = 0;
+            this.numberboxTempValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // comboUnits
+            // 
+            this.comboUnits.FormattingEnabled = true;
+            this.comboUnits.Items.AddRange(new object[] {
+            "Fahrenheit",
+            "Celsius",
+            "Kelvin"});
+            this.comboUnits.Location = new System.Drawing.Point(513, 100);
+            this.comboUnits.Name = "comboUnits";
+            this.comboUnits.Size = new System.Drawing.Size(121, 26);
+            this.comboUnits.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 623);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.comboUnits);
+            this.Controls.Add(this.numberboxTempValue);
             this.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.Text = "Temperature Conversion Program";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberboxTempValue)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numberboxTempValue;
+        private System.Windows.Forms.ComboBox comboUnits;
     }
 }
 
