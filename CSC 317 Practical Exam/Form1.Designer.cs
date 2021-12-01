@@ -34,9 +34,10 @@ namespace CSC_317_Practical_Exam
             this.label1 = new System.Windows.Forms.Label();
             this.lblConversion1Value = new System.Windows.Forms.Label();
             this.lblConversion2Value = new System.Windows.Forms.Label();
-            this.imageTempGuage = new System.Windows.Forms.PictureBox();
+            this.imageTempGauge = new System.Windows.Forms.PictureBox();
+            this.ErrorMessageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numberboxTempValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageTempGuage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageTempGauge)).BeginInit();
             this.SuspendLayout();
             // 
             // numberboxTempValue
@@ -56,6 +57,7 @@ namespace CSC_317_Practical_Exam
             this.numberboxTempValue.Size = new System.Drawing.Size(120, 26);
             this.numberboxTempValue.TabIndex = 0;
             this.numberboxTempValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numberboxTempValue.ValueChanged += new System.EventHandler(this.numberboxTempValue_ValueChanged);
             // 
             // comboUnits
             // 
@@ -68,6 +70,7 @@ namespace CSC_317_Practical_Exam
             this.comboUnits.Name = "comboUnits";
             this.comboUnits.Size = new System.Drawing.Size(121, 26);
             this.comboUnits.TabIndex = 1;
+            this.comboUnits.SelectedIndexChanged += new System.EventHandler(this.comboUnits_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -100,22 +103,31 @@ namespace CSC_317_Practical_Exam
             this.lblConversion2Value.Text = "value2";
             this.lblConversion2Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // imageTempGuage
+            // imageTempGauge
             // 
-            this.imageTempGuage.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imageTempGuage.Location = new System.Drawing.Point(81, 154);
-            this.imageTempGuage.Name = "imageTempGuage";
-            this.imageTempGuage.Size = new System.Drawing.Size(204, 93);
-            this.imageTempGuage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.imageTempGuage.TabIndex = 5;
-            this.imageTempGuage.TabStop = false;
+            this.imageTempGauge.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imageTempGauge.Location = new System.Drawing.Point(81, 154);
+            this.imageTempGauge.Name = "imageTempGauge";
+            this.imageTempGauge.Size = new System.Drawing.Size(204, 93);
+            this.imageTempGauge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imageTempGauge.TabIndex = 5;
+            this.imageTempGauge.TabStop = false;
+            // 
+            // ErrorMessageLabel
+            // 
+            this.ErrorMessageLabel.AutoSize = true;
+            this.ErrorMessageLabel.Location = new System.Drawing.Point(78, 287);
+            this.ErrorMessageLabel.Name = "ErrorMessageLabel";
+            this.ErrorMessageLabel.Size = new System.Drawing.Size(0, 18);
+            this.ErrorMessageLabel.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 623);
-            this.Controls.Add(this.imageTempGuage);
+            this.Controls.Add(this.ErrorMessageLabel);
+            this.Controls.Add(this.imageTempGauge);
             this.Controls.Add(this.lblConversion2Value);
             this.Controls.Add(this.lblConversion1Value);
             this.Controls.Add(this.label1);
@@ -126,7 +138,7 @@ namespace CSC_317_Practical_Exam
             this.Name = "Form1";
             this.Text = "Temperature Conversion Program";
             ((System.ComponentModel.ISupportInitialize)(this.numberboxTempValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageTempGuage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageTempGauge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +151,8 @@ namespace CSC_317_Practical_Exam
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblConversion1Value;
         private System.Windows.Forms.Label lblConversion2Value;
-        private System.Windows.Forms.PictureBox imageTempGuage;
+        private System.Windows.Forms.PictureBox imageTempGauge;
+        private System.Windows.Forms.Label ErrorMessageLabel;
     }
 }
 
