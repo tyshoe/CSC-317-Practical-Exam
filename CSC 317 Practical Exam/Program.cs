@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Tyler Shoemake CSC 317
+//Exam 2
+//Temperature gauge converter
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
